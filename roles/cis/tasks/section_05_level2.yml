@@ -15,18 +15,18 @@
 #   limitations under the License.
 #
 
-  - name: 5.2.1.1 Configure Data Retention (Not Scored)
-    lineinfile: >
-      state=present
-      dest=/etc/audit/auditd.conf
-      regexp="^max_log_file ="
-      line="max_log_file = {{ max_log_file }}"
-    notify: Reload auditd Rules
-    tags:
-      - notscored
-      - section5.2
-      - section5.2.1
-      - section5.2.1.1
+  # - name: 5.2.1.1 Configure Data Retention (Not Scored)
+  #   lineinfile: >
+  #     state=present
+  #     dest=/etc/audit/auditd.conf
+  #     regexp="^max_log_file ="
+  #     line="max_log_file = {{ max_log_file }}"
+  #   notify: Reload auditd Rules
+  #   tags:
+  #     - notscored
+  #     - section5.2
+  #     - section5.2.1
+  #     - section5.2.1.1
 
   - name: 5.2.1.2 Disable System on Audit Log Full (Not Scored)
     lineinfile: >
