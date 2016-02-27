@@ -86,34 +86,34 @@
       - scored
       - section3.5
 
-  - name: 3.6 Configure Network Time Protocol (ipv4) (Scored)
-    yum: >
-      pkg=ntp
-      state=installed    
-    always_run: yes
-    tags:
-      - scored
-      - section3.6
+  # - name: 3.6 Configure Network Time Protocol (ipv4) (Scored)
+  #   yum: >
+  #     pkg=ntp
+  #     state=installed    
+  #   always_run: yes
+  #   tags:
+  #     - scored
+  #     - section3.6
 
-  - name: 3.6 Configure Network Time Protocol (ipv4) (Scored)
-    service: >
-      name=ntpd
-      state=started
-      enabled=yes
-    tags:
-      - scored
-      - section3.6
+  # - name: 3.6 Configure Network Time Protocol (ipv4) (Scored)
+  #   service: >
+  #     name=ntpd
+  #     state=started
+  #     enabled=yes
+  #   tags:
+  #     - scored
+  #     - section3.6
 
-  - name: 3.6 Configure Network Time Protocol (ipv4) (Scored)
-    lineinfile: >
-      dest=/etc/ntp.conf
-      state=present
-      regexp="^restrict default"
-      line="restrict default kod nomodify notrap nopeer noquery"
-      insertafter=EOF
-    tags:
-      - scored
-      - section3.6
+  # - name: 3.6 Configure Network Time Protocol (ipv4) (Scored)
+  #   lineinfile: >
+  #     dest=/etc/ntp.conf
+  #     state=present
+  #     regexp="^restrict default"
+  #     line="restrict default kod nomodify notrap nopeer noquery"
+  #     insertafter=EOF
+  #   tags:
+  #     - scored
+  #     - section3.6
 
   # - name: 3.6 Configure Network Time Protocol (ipv6) (Scored)
   #   lineinfile: >
