@@ -115,16 +115,16 @@
       - scored
       - section3.6
 
-  - name: 3.6 Configure Network Time Protocol (ipv6) (Scored)
-    lineinfile: >
-      dest=/etc/ntp.conf
-      state=present
-      regexp="^restrict -6 default"
-      line="restrict -6 default kod nomodify notrap nopeer noquery"
-      insertafter=EOF
-    tags:
-      - scored
-      - section3.6
+  # - name: 3.6 Configure Network Time Protocol (ipv6) (Scored)
+  #   lineinfile: >
+  #     dest=/etc/ntp.conf
+  #     state=present
+  #     regexp="^restrict -6 default"
+  #     line="restrict -6 default kod nomodify notrap nopeer noquery"
+  #     insertafter=EOF
+  #   tags:
+  #     - scored
+  #     - section3.6
 
   - name: 3.7 Remove LDAP (Not Scored)
     yum: >
