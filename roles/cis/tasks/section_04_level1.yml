@@ -250,14 +250,14 @@
       - section4.4
       - section4.4.2
 
-  - name: 4.5.1 Install TCP Wrappers (Not Scored)
-    yum: >
-      name=tcp_wrappers
-      state=present
-    tags:
-      - notscored
-      - section4.5
-      - section4.5.1
+  # - name: 4.5.1 Install TCP Wrappers (Not Scored)
+  #   yum: >
+  #     name=tcp_wrappers
+  #     state=present
+  #   tags:
+  #     - notscored
+  #     - section4.5
+  #     - section4.5.1
 
   - name: 4.5.2 Create /etc/hosts.allow (Not Scored)
     lineinfile: >
