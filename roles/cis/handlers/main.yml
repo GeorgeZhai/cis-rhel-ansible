@@ -22,7 +22,8 @@
     command: /usr/sbin/prelink -ua
 
   - name: Reload sshd
-    shell: /etc/init.d/sshd reload
+    # shell: /etc/init.d/sshd reload
+    shell: /usr/bin/systemctl reload sshd.service
     register: result
     changed_when: "result.rc == 0"
     failed_when: "result.rc not in [0, 7]"
